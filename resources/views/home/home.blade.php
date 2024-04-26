@@ -138,7 +138,7 @@
 
                 <div class="col-lg-6 col-md-12">
                     <div class="main-banner-image">
-                        <img src="{{asset('home/img/banner/banner1.png')}}" alt="image">
+                        <img src="{{asset('home/img/banner/banner2.png')}}" alt="image">
                     </div>
                 </div>
             </div>
