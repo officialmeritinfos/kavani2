@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 p-0">
-                   <img src="{{asset('home/images/ziluxfundcert.jpeg')}}" alt="image">
+                   <img src="{{asset('home/images/ziluxcert.jpeg')}}" alt="image">
                 </div>
             </div>
         </div>
