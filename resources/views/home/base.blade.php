@@ -96,10 +96,7 @@
                         </div>
                         <div class="widget">
                             <ul class="list-inline text-right flip sm-text-center">
-                                <li>
-                                    <a class="text-white" href="{{url('faq')}}">FAQ</a>
-                                </li>
-                                <li class="text-white">|</li>
+
                                 <li>
                                     <a class="text-white" href="{{url('plans')}}">Plans</a>
                                 </li>
@@ -224,7 +221,7 @@
                         <div class="widget no-border m-0">
                             <ul class="list-inline sm-text-center mt-5 font-14">
                                 <li>
-                                    <a href="#">FAQ</a>
+                                    <a href="{{url('faq')}}">FAQ</a>
                                 </li>
                                 <li>|</li>
                                 <li>
