@@ -10,7 +10,7 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="col-md-6">
-                            <h2 class="text-theme-colored2 font-36">About</h2>
+                            <h2 class="text-theme-colored2 font-36">{{$pageName}}</h2>
                             <ol class="breadcrumb text-left mt-10 white">
                                 <li><a href="{{url('/')}}">Home</a></li>
                                 <li><a href="#">Pages</a></li>

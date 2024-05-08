@@ -69,12 +69,12 @@
 @inject('injected','App\Defaults\Custom')
 <div id="wrapper" class="clearfix">
     <!-- preloader -->
-    <div id="preloader">
-        <div id="spinner">
-            <img alt="" src="{{asset('home/images/preloaders/5.gif')}}">
-        </div>
-        <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
-    </div>
+{{--    <div id="preloader">--}}
+{{--        <div id="spinner">--}}
+{{--            <img alt="" src="{{asset('home/images/preloaders/5.gif')}}">--}}
+{{--        </div>--}}
+{{--        <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>--}}
+{{--    </div>--}}
 
     <!-- Header -->
     <header id="header" class="header">
@@ -369,5 +369,17 @@
 </script>
 <!-- end popup massage -->
 @stack('js')
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'b978877d6880b8554611b58b79a1acd91d203ea0';
+    window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 </body>
 </html>
