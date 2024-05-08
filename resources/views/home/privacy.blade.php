@@ -1,18 +1,25 @@
 @extends('home.base')
 @section('content')
-    <!-- Start Page-title Area -->
-    <div class="page-title-area bg-black">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>{{$pageName}}</h2>
-                <ul>
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li>{{$pageName}}</li>
-                </ul>
+    <!-- Start main-content -->
+    <div class="main-content">
+        <!-- Section: inner-header -->
+        <section class="inner-header divider layer-overlay overlay-dark-4" data-bg-img="{{asset('home/images/bg/bg8.jpg')}}">
+            <div class="container pt-120 pb-60">
+                <!-- Section Content -->
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="text-theme-colored2 font-36">About</h2>
+                            <ol class="breadcrumb text-left mt-10 white">
+                                <li><a href="{{url('/')}}">Home</a></li>
+                                <li><a href="#">Pages</a></li>
+                                <li class="active">{{$pageName}}</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- End Page-title Area -->
+        </section>
 
 
     <!--About One Start-->
@@ -66,6 +73,7 @@
         </div>
     </section>
     <!--About One End-->
+    </div>
 
 
 @endsection

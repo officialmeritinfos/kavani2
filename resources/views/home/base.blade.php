@@ -1,23 +1,57 @@
-<!doctype html>
-<html lang="zxx">
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Links of CSS files -->
-    <link rel="stylesheet" href="{{asset('home/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/meanmenu.min.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/magnific-popup.min.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/odometer.min.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/showMoreItems-theme.min.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/remixicon.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('home/css/responsive.css')}}">
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
+
+    <!-- Stylesheet -->
+    <link href="{{asset('home/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('home/css/jquery-ui.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('home/css/animate.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('home/css/css-plugin-collections.css')}}" rel="stylesheet"/>
+    <!-- CSS | menuzord megamenu skins -->
+    <link href="{{asset('home/css/menuzord-megamenu.css')}}" rel="stylesheet"/>
+    <link id="menuzord-menu-skins" href="{{asset('home/css/menuzord-skins/menuzord-boxed.css')}}" rel="stylesheet"/>
+    <!-- CSS | Main style file -->
+    <link href="{{asset('home/css/style-main.css')}}" rel="stylesheet" type="text/css">
+    <!-- CSS | Preloader Styles -->
+    <link href="{{asset('home/css/preloader.css')}}" rel="stylesheet" type="text/css">
+    <!-- CSS | Custom Margin Padding Collection -->
+    <link href="{{asset('home/css/custom-bootstrap-margin-padding.css')}}" rel="stylesheet" type="text/css">
+    <!-- CSS | Responsive media queries -->
+    <link href="{{asset('home/css/responsive.css')}}" rel="stylesheet" type="text/css">
+    <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+    <!-- <link href="{{asset('home/css/style.css')}}" rel="stylesheet" type="text/css"> -->
+
+    <!-- Revolution Slider 5.x CSS settings -->
+    <link  href="{{asset('home/js/revolution-slider/css/settings.css')}}" rel="stylesheet" type="text/css"/>
+    <link  href="{{asset('home/js/revolution-slider/css/layers.css')}}" rel="stylesheet" type="text/css"/>
+    <link  href="{{asset('home/js/revolution-slider/css/navigation.css')}}" rel="stylesheet" type="text/css"/>
+
+    <!-- CSS | Theme Color -->
+    <link href="{{asset('home/css/colors/theme-skin-color-set1.css')}}" rel="stylesheet" type="text/css">
+
+    <!-- external javascripts -->
+    <script src="{{asset('home/js/jquery-2.2.4.min.js')}}"></script>
+    <script src="{{asset('home/js/jquery-ui.min.js')}}"></script>
+    <script src="{{asset('home/js/bootstrap.min.js')}}"></script>
+    <!-- JS | jquery plugin collection for this theme -->
+    <script src="{{asset('home/js/jquery-plugin-collection.js')}}"></script>
+
+    <!-- Revolution Slider 5.x SCRIPTS -->
+    <script src="{{asset('home/js/revolution-slider/js/jquery.themepunch.tools.min.js')}}"></script>
+    <script src="{{asset('home/js/revolution-slider/js/jquery.themepunch.revolution.min.js')}}"></script>
+
+    <!-- HTML5 shim and Respond.js')}} for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js')}} doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')}}"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
+    <![endif]-->
     <meta name="og:title" content="{{$siteName}}"/>
     <meta name="og:type" content="company"/>
     <meta name="og:url" content="/"/>
@@ -31,180 +65,205 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('home/images/'.$web->logo)}}" />
     @stack('css')
 </head>
-<body>
+<body class="has-side-panel side-panel-right fullwidth-page">
 @inject('injected','App\Defaults\Custom')
-
-<!-- Start Top Header Area -->
-<div class="top-header-area">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-4 col-md-4">
-                <ul class="top-header-social-links d-flex align-items-center">
-                    <li>Follow us on:</li>
-                    <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-instagram-line"></i></a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-8 col-md-8">
-                <ul class="top-header-contact-info">
-                    <li><i class="ri-time-line"></i><span>SUN - SAT:</span> 24/7</li>
-                    <li><i class="ri-map-pin-2-line"></i><span>OFFICE:</span> {!! $web->address !!}</li>
-                </ul>
-            </div>
+<div id="wrapper" class="clearfix">
+    <!-- preloader -->
+    <div id="preloader">
+        <div id="spinner">
+            <img alt="" src="{{asset('home/images/preloaders/5.gif')}}">
         </div>
+        <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
     </div>
-</div>
-<!-- End Top Header Area -->
 
-<!-- Start Navbar Area -->
-<div class="navbar-area">
-    <div class="enry-responsive-nav">
-        <div class="container">
-            <div class="enry-responsive-menu">
-                <div class="logo">
-                    <a href="{{url('/')}}"><img src="{{asset('home/images/'.$web->logo)}}" style="width: 100px;" alt="logo"></a>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="widget text-white">
+                            <ul class="list-inline xs-text-center text-white">
+                                <li class="m-0 pl-10 pr-10">
+                                    <a href="mailto:{{$web->email}}" class="text-white"><i class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                        {{$web->email}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="side-panel-trigger" class="side-panel-trigger ml-15 mt-8 pull-right sm-pull-none"><a href="#"><i class="fa fa-bars font-24"></i></a>
+                        </div>
+                        <div class="widget">
+                            <ul class="list-inline text-right flip sm-text-center">
+                                <li>
+                                    <a class="text-white" href="{{url('faq')}}">FAQ</a>
+                                </li>
+                                <li class="text-white">|</li>
+                                <li>
+                                    <a class="text-white" href="{{url('plans')}}">Plans</a>
+                                </li>
+                                <li class="text-white">|</li>
+                                <li>
+                                    <a class="text-white" href="{{route('register')}}">Register</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="header-middle bg-lightest xs-text-center p-0">
+            <div class="container pt-20 pb-15">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                        <a class="menuzord-brand pull-left flip sm-pull-center mt-10" href="{{url('/')}}"><img src="{{asset('home/images/'.$web->logo)}}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
+                <div class="container">
+                    <nav id="menuzord" class="menuzord default theme-colored menuzord-responsive">
+                        <ul class="menuzord-menu">
+                            <li class="active"><a href="{{url('/')}}">Home</a></li>
+                            <li><a href="{{url('about')}}">About</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="{{url('plans')}}" class="nav-link">Plans</a></li>
+                                    <li ><a href="{{url('faqs')}}" class="nav-link">Frequently Asked Questions</a></li>
+                                    <li><a href="{{url('terms')}}" class="nav-link">Terms & Conditions</a></li>
+                                    <li><a href="{{url('privacy')}}" class="nav-link">Privacy policy</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Service</a>
+                                <ul class="dropdown">
+                                    @foreach($injected->getServices() as $service)
+                                        <li><a href="{{route('service.details',['id'=>$service->id])}}" class="nav-link">{{$service->title}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                            <li><a href="#">Account</a>
+                                <ul class="dropdown">
+                                    <li><a href="{{route('login')}}" class="nav-link">Login</a></li>
 
-    <div class="enry-nav">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('home/images/'.$web->logo)}}"
-                                                            style="width: 100px;" alt="logo"></a>
-
-                <div class="collapse navbar-collapse mean-menu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="{{url('/')}}" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url('about')}}" class="nav-link">About</a>
-                        </li>
-
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="{{url('plans')}}" class="nav-link">Plans</a></li>
-                                <li class="nav-item"><a href="{{url('faqs')}}" class="nav-link">Frequently Asked Questions</a></li>
-                                <li class="nav-item"><a href="{{url('terms')}}" class="nav-link">Terms & Conditions</a></li>
-                                <li class="nav-item"><a href="{{url('privacy')}}" class="nav-link">Privacy policy</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Services</a>
-                            <ul class="dropdown-menu">
-                                @foreach($injected->getServices() as $service)
-                                    <li class="nav-item"><a href="{{route('service.details',['id'=>$service->id])}}" class="nav-link">{{$service->title}}</a></li>
-                                @endforeach
-                            </ul>
-                        </li>
-
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Account</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="{{route('login')}}" class="nav-link">Login</a></li>
-
-                                <li class="nav-item"><a href="{{route('register')}}" class="nav-link">Register</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item"><a href="{{url('contact')}}" class="nav-link">Contact</a></li>
+                                    <li><a href="{{route('register')}}" class="nav-link">Register</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{url('contact')}}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    @yield('content')
+    <!-- Footer -->
+    <footer id="footer" class="footer" data-bg-color="#152029">
+        <div class="container pt-60 pb-20">
+            <div class="col-sm-6 col-md-3">
+                <div class="widget dark">
+                    <img alt="" src="{{asset('home/images/'.$web->logo)}}">
+                    <p class="mt-20">{!! $web->address !!}</p>
+                    <ul class="list-inline">
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-gray mr-5"></i> <a class="text-gray" href="mailto:{{$web->email}}">{{$web->email}}</a> </li>
                     </ul>
-
+                    <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
-    </div>
-</div>
-<!-- End Navbar Area -->
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="widget dark">
+                    <h4 class="widget-title line-bottom-theme-colored2">Useful Links</h4>
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <ul>
+                                <li ><a href="{{url('plans')}}" class="nav-link">Plans</a></li>
+                                <li ><a href="{{url('faqs')}}" class="nav-link">Frequently Asked Questions</a></li>
+                                <li ><a href="{{url('terms')}}" class="nav-link">Terms & Conditions</a></li>
+                                <li ><a href="{{url('privacy')}}" class="nav-link">Privacy policy</a></li>
 
-@yield('content')
-
-<!-- Start Footer Area -->
-<footer class="footer-area">
-    <div class="container">
-        <div class="row  justify-content-center">
-            <div class="col-lg-3 col-sm-6 col-md-6">
-                <div class="single-footer-widget">
-                    <a href="{{url('/')}}" class="logo">
-                        <img src="{{asset('home/images/'.$web->logo)}}" alt="image">
-                    </a>
-                    <div class="footer-contact-info">
-                        <h5>Contact:</h5>
-                        <ul>
-                            @if(!empty($web->phone))
-                                <li><span>Call:</span> <a href="tel:{{$web->phone}}">{{$web->phone}}</a></li>
-                            @endif
-                            <li><span>Email:</span> <a href="mailto:{{$web->email}}">{{$web->email}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <ul>
+                                <li ><a href="{{url('contact')}}" class="nav-link">Contact</a></li>
+                                <li ><a href="{{route('register')}}" class="nav-link">Register</a></li>
+                                <li ><a href="{{route('login')}}" class="nav-link">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="widget dark">
+                    <h4 class="widget-title line-bottom-theme-colored2">Opening Hours</h4>
+                    <div class="opening-hours">
+                        <ul class="list-border">
+                            <li class="clearfix"> <span> Mon - Sun :  </span>
+                                <div class="value pull-right"> Open 24/7 </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-md-6">
-                <div class="single-footer-widget pl-4">
-                    <h3>Quick Links</h3>
-                    <ul class="links-list">
-                        <li><a href="{{url('about')}}">About us</a></li>
-                        <li><a href="{{url('contact')}}">Contact Us</a></li>
-                        <li><a href="{{url('plans')}}">Plans</a></li>
-                        <li><a href="{{url('faqs')}}">FAQs</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-md-6">
-                <div class="single-footer-widget pl-2">
-                    <h3>Services</h3>
-                    <ul class="links-list">
-                        @foreach($injected->getServices() as $service)
-                            <li><a href="{{route('service.details',['id'=>$service->id])}}">{{$service->title}}</a></li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-
         </div>
-    </div>
-    <div class="copyright-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-7 col-sm-6">
-                    <p>Copyright @ 2012 - {{date('Y')}} {{$siteName}} </p>
-                </div>
-                <div class="col-lg-6 col-md-5 col-sm-6">
-                    <ul class="social-links">
-                        <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-instagram-line"></i></a></li>
-                    </ul>
+        <div class="footer-bottom" data-bg-color="#253039">
+            <div class="container pt-20 pb-20">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="font-14 text-black-777 m-0">Copyright &copy;2012 - {{date('Y')}} <span class="text-theme-colored2">{{$siteName}}</span>. All Rights Reserved</p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="widget no-border m-0">
+                            <ul class="list-inline sm-text-center mt-5 font-14">
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>|</li>
+                                <li>
+                                    <a href="#">Help Desk</a>
+                                </li>
+                                <li>|</li>
+                                <li>
+                                    <a href="#">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- End Footer Area -->
+    </footer>
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- end wrapper -->
 
-<div class="go-top"><i class="ri-arrow-up-s-line"></i></div>
+<!-- Footer Scripts -->
+<!-- JS | Chart-->
+<script src="{{asset('home/js/chart.js')}}"></script>
+<!-- JS | Custom script for all pages -->
+<script src="{{asset('home/js/custom.js')}}"></script>
 
-<!-- Links of JS files -->
-<script src="{{asset('home/js/jquery.min.js')}}"></script>
-<script src="{{asset('home/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('home/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('home/js/appear.min.js')}}"></script>
-<script src="{{asset('home/js/odometer.min.js')}}"></script>
-<script src="{{asset('home/js/magnific-popup.min.js')}}"></script>
-<script src="{{asset('home/js/mixitup.min.js')}}"></script>
-<script src="{{asset('home/js/meanmenu.min.js')}}"></script>
-<script src="{{asset('home/js/showMoreItems.min.js')}}"></script>
-<script src="{{asset('home/js/wow.min.js')}}"></script>
-<script src="{{asset('home/js/form-validator.min.js')}}"></script>
-<script src="{{asset('home/js/contact-form-script.js')}}"></script>
-<script src="{{asset('home/js/ajaxchimp.min.js')}}"></script>
-<script src="{{asset('home/js/main.js')}}"></script>
-<!-- Google language start -->
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+      (Load Extensions only on Local File Systems !
+       The following part can be removed on Server for On Demand Loading) -->
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.actions.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.migration.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/revolution-slider/js/extensions/revolution.extension.video.min.js')}}"></script>
+!-- Google language start -->
 <style>
 
     #google_translate_element {
@@ -310,18 +369,5 @@
 </script>
 <!-- end popup massage -->
 @stack('js')
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-    var _smartsupp = _smartsupp || {};
-    _smartsupp.key = '8d4e3643636f011dd46382a84371ec9de971e3c7';
-    window.smartsupp||(function(d) {
-        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-        c.type='text/javascript';c.charset='utf-8';c.async=true;
-        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-    })(document);
-</script>
-<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
-
 </body>
 </html>
