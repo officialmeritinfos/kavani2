@@ -839,7 +839,7 @@
                                             </p>
                                         </div>
                                         <div class="content mt-30">
-                                            <div class="thumb"> <img class="img-circle" alt="" src="{{asset('home/images/testimonials/s1.jpg')}}"> </div>
+                                            <div class="thumb"> <img class="img-circle" alt="" src="https://ui-avatars.com/api/?name=Jonathan&background=0D8ABC&color=fff"> </div>
                                             <div class="mr-20 mt-0">
                                                 <h5 class="author font-weight-600">Jonathan S</h5>
                                             </div>
@@ -856,7 +856,7 @@
                                             </p>
                                         </div>
                                         <div class="content mt-30">
-                                            <div class="thumb"> <img class="img-circle" alt="" src="{{asset('home/images/testimonials/s1.jpg')}}"> </div>
+                                            <div class="thumb"> <img class="img-circle" alt="" src="https://ui-avatars.com/api/?name=Rachel&background=0D8ABC&color=fff"> </div>
                                             <div class="mr-20 mt-0">
                                                 <h5 class="author font-weight-600">Rachel A.</h5>
                                             </div>
@@ -872,7 +872,7 @@
                                             </p>
                                         </div>
                                         <div class="content mt-30">
-                                            <div class="thumb"> <img class="img-circle" alt="" src="{{asset('home/images/testimonials/s1.jpg')}}"> </div>
+                                            <div class="thumb"> <img class="img-circle" alt="" src="https://ui-avatars.com/api/?name=Adrew324&background=0D8ABC&color=fff"> </div>
                                             <div class="mr-20 mt-0">
                                                 <h5 class="author font-weight-600">Andrew324</h5>
                                             </div>
